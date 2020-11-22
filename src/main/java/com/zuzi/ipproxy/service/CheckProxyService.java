@@ -45,9 +45,10 @@ public class CheckProxyService extends BasePullService {
         for (int i = 0; i < size; i++) {
             ProxyModel proxyModel = proxyModels.get(i);
             try {
-                Document d = getConnection("http://baidu.con")
+                Document d = getConnection("http://baidu.com")
                         .proxy(proxyModel.getHost(), Integer.valueOf(proxyModel.getPort()))
                         .get();
+                System.err.println("h "+proxyModel.getHost()+" p "+Integer.valueOf(proxyModel.getPort()));
                 if (d != null && d.body() != null) {
                     //成功
                     proxyModel.setStatus(1);
@@ -57,7 +58,7 @@ public class CheckProxyService extends BasePullService {
                     continue;
                 }
             } catch (IOException e) {
-//                e.printStackTrace();
+                e.printStackTrace();
             }
             proxyModel.setStatus(2);
             failId.add(proxyModel);

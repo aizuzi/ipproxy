@@ -20,10 +20,7 @@ public class KuaidailiService extends BasePullService {
     public List<ProxyModel> test() {
         List<ProxyModel> proxyModels = new ArrayList<>();
 
-        proxyModels.add(createProxyModel("175.44.108.197", "9999"));
-        proxyModels.add(createProxyModel("115.221.245.228", "9999"));
-        proxyModels.add(createProxyModel("1.198.72.87", "9999"));
-        proxyModels.add(createProxyModel("175.42.68.73", "9999"));
+        proxyModels.add(createProxyModel("61.135.185.156", "80"));
 
         return proxyModels;
     }
