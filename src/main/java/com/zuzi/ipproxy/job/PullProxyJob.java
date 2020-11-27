@@ -17,8 +17,8 @@ public class PullProxyJob {
     @Autowired
     PullProxyService service;
 
-    //表示每隔3秒
-    @Scheduled(fixedDelay = 1000*10)
+    //表示每隔15分钟
+    @Scheduled(fixedDelay = 1000*60*15)
     public void fixedRateJob() {
 
         System.err.println("11111111111111111111");

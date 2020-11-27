@@ -21,7 +21,7 @@ public class CheckProxyJob {
     CheckProxyService service;
 
     //表示每隔3秒
-    @Scheduled(fixedDelay = 1000 * 10)
+    @Scheduled(fixedDelay = 1000 * 60*10)
     public void fixedRateJob() {
         service.checkProxy();
 //        System.err.println("11111111111111111111");

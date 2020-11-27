@@ -36,9 +36,9 @@ public class KuaidailiService extends BasePullService {
     }
     @Override
     public List<ProxyModel> onPull() {
-        if(1+1==2) {
-            return test();
-        }
+//        if(1+1==2) {
+//            return test();
+//        }
         try {
             Document d = getConnection("https://www.kuaidaili.com/free/")
                     .get();
